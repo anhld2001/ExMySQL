@@ -21,4 +21,5 @@ insert into users values
 ('Deirdre','Chace','ryCE5FlyS8q54A5036luzVS91j6C7P76E9X0O58htzgthuX24LG%DEirdre_Chace%'),
 ('Julietta','Beer','Tn35g5h51u7ltW946J');
 
-select * from users;
+select * from users 
+where locate(concat("%",first_name,'_',second_name,'%'),binary attribute) != 0 order by attribute;
